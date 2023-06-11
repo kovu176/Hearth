@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; ;
+}
+
+body {
+    background: #fff;
+}
+
+header {
+    width: 99%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px;
+    margin: 20px auto;
+    
+}
+
+.logo {
+    display: flex;
+    width: 120px;
+    margin-top: 10px;
+    
+}
+
+
+
+.log {
+    
+    width: 300px;
+    height: 120px;
+    margin-bottom: 30px;
+    margin-top: 2px;
+}
+
+nav .logo {
+    display: none;
+}
+
+
+
+
+nav ul {
+    display: inline-flex;
+}
+
+nav ul .search {
+    margin-top: 8px;
+    margin-right: 10px;
+    background: #628f82;
+    
+    height: 30px;
+    border-radius: 30px;
+    padding: 10 20px;
+    display: flex;
+    align-items: center;
+    transition: .9s;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.1 );
+}
+
+.search input::placeholder {
+    color: #fff;
+}
+
+.search:hover input {
+    width: 190px;
+
+}
+
+.search input {
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 1em;
+    transition: .9s;
+    text-align: center;
+
+}
+
+.search i{
+    margin-top: 7px;
+    color: #fff
+}
+
+
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #434343;
+    display: block;
+    margin: 0 2px;
+    font-weight: 500;
+    padding: 8px 18px;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+
+nav ul li a:hover {
+    color: #628f82;
+    
+}
+
+
+
+nav ul li #inicio{
+    color: #628f82;
+}
+
+nav ul li a.active {
+    background: #628f82;
+    color: #fff;
+    transition: .7s;
+    border: 2px solid #628f82 ;
+
+}
+
+nav ul li a.active:hover {
+    color: #628f82;
+    background:#fff ;
+}
+
+.hamburger {
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.hamburger:hover {
+    background: #f6f4ff;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #212526;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+
+.category .item {
+    opacity: 70%;
+    transition: .7s;
+    
+}
+
+.category .item:hover{
+    opacity: 400%;
+    
+   
+}
+
+
+
+.category .item img {
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+
+
+.category .item .animal {
+    display: block;
+    padding: 0 16px;
+}
+
+.category .item a {
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    color: #434343;
+    
+
+}
+
+.main {
+    margin-top: 40px;
+    height: 100%
+    
+    
+}
+
+.main .main_content {
+    display: flex;
+    margin: 20px;
+    
+    
+}
+
+.project {
+    padding: 8px;
+}
+
+.main .main_content .project {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    
+    
+}
+
+.main_content .project img{
+    
+    border-radius: 20px;
+    margin-top: 40px;
+    width: 380px;
+    height:275px;
+}
+
+
+.main_content .project a{
+    display: block;
+    font-size: 14px;
+    color: #434343;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    
+}
+
+.main_content .project .subtitle{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+
+
+ 
+@media only  screen and (max-width: 768px) {
+    header {
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    nav {
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: #fefefe;
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba(0,0,0,0.05);
+    }
+
+    #nav_check:checked ~ nav {
+        left: 0;
+    }
+
+    nav .logo {
+        margin-top: 40px ;
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    nav ul li a {
+        margin-bottom: 5px;
+        padding: 10 15px;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .search i{
+        margin-right: 5px;
+        margin-top: 7px;
+        color: #fff;
+    }
+
+   
+    .category .item .animal  {
+        flex-wrap: wrap;
+        font-size: 14px;
+        margin-left: 10px;
+        width: 90px;
+        
+    }
+
+    .category .item .animal img{
+        width: 32px;
+        height: 32px;
+    }
+
+   
+
+    .main_content {
+        margin: 0 auto;
+        flex-wrap: wrap;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main_content .project .subtitle {
+        display: none;
+    }
+
+    
+    
+}
+    
